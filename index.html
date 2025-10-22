@@ -1,30 +1,101 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>ONG - Juntos Pela Causa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/plataforma-ong-parte-2/css/style.css">
+    <meta name="description" content="Conheça a nossa ONG: missão, visão, valores e projetos sociais. Ajude a transformar vidas!">
+    <meta name="keywords" content="ONG, doação, voluntariado, projetos sociais, impacto social">
+    <title>Início - [Nome da ONG] | Juntos Pela Causa</title>
+    <link rel="stylesheet" href="css/style.css"> <link rel="icon" href="img/ong-logo.png"> 
 </head>
 <body>
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo</a>
+
     <header>
-        <img src="/plataforma-ong-parte-2/img/logo.png" alt="Logotipo da ONG">
-        <nav>
+        <div class="logo">
+            <img src="img/ong-logo.png" alt="Logotipo da ONG - Juntos Pela Causa">
+        </div>
+        
+        <button class="menu-toggle" aria-controls="navegacao-principal" aria-expanded="false" aria-label="Abrir Menu">☰</button>
+        
+        <nav aria-label="Navegação Principal" id="navegacao-principal">
             <ul>
-                <li><a href="/plataforma-ong-parte-2/index.html">Início</a></li>
-                <li><a href="/plataforma-ong-parte-2/sobre.html">Sobre</a></li>
-                <li><a href="/plataforma-ong-parte-2/contato.html">Contato</a></li>
+                <li><a href="index.html" aria-current="page">Início</a></li>
+                <li class="dropdown">
+                    <a href="projetos.html" role="button" aria-expanded="false">Projetos Sociais ▼</a>
+                    <ul class="dropdown-content">
+                        <li><a href="projetos.html#raizes">Raízes do Futuro</a></li>
+                        <li><a href="projetos.html#conexao">Conexão Digital</a></li>
+                    </ul>
+                </li>
+                <li><a href="cadastro.html">Seja Voluntário / Doador</a></li>
             </ul>
         </nav>
+        <a href="cadastro.html" class="cta-button cta-header">Doar Agora</a> 
     </header>
-    <main>
-        <h1>Bem-vindo à ONG Juntos Pela Causa</h1>
-        <p>Nosso objetivo é ajudar quem mais precisa. Junte-se a nós!</p>
-        <img src="/plataforma-ong-parte-2/img/banner.jpg" alt="Banner da ONG">
+
+    <main id="conteudo-principal">
+        <section id="hero" class="hero-section">
+            <figure>
+                <img src="img/hero.jpg.jpg" alt="Mãos de pessoas unidas, simbolizando união e força comunitária.">
+                <figcaption>Transformando vidas através da solidariedade.</figcaption>
+            </figure>
+            <div>
+                <h1>Juntos Pela Causa: Gerando Impacto Social</h1>
+                <p>Somos uma organização sem fins lucrativos dedicada a **promover a transformação social** através de projetos focados em educação, saúde e sustentabilidade. Nossa missão é criar um impacto positivo duradouro nas comunidades que atendemos.</p>
+                <a href="projetos.html" class="cta-button">Conheça Nossos Projetos</a>
+            </div>
+        </section>
+
+        <section class="valores">
+            <h2>Nossos Pilares</h2>
+            <div class="destaques">
+                <article>
+                    <h3>Missão</h3>
+                    <p>Descrição clara e concisa do propósito principal da ONG. Alcançar a autonomia e o bem-estar das comunidades carentes.</p>
+                </article>
+                <article>
+                    <h3>Visão</h3>
+                    <p>O futuro que a ONG deseja construir e alcançar: ser referência nacional em gestão transparente e impacto social efetivo.</p>
+                </article>
+                <article>
+                    <h3>Valores</h3>
+                    <ul>
+                        <li>Solidariedade</li>
+                        <li>Transparência</li>
+                        <li>Comprometimento</li>
+                        <li>Inovação</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="transparencia">
+            <h2>Transparência e Prestação de Contas</h2>
+            <p>Acreditamos que a confiança é a base de nosso trabalho. Acesse nossos relatórios anuais, balanços e prestação de contas detalhada de nossas campanhas de captação de recursos.</p>
+            <a href="#" class="document-link" target="_blank">Relatório Anual 2024 (PDF)</a>
+            <a href="#" class="document-link" target="_blank">Balanço Patrimonial</a>
+        </section>
+
+        <section id="contato">
+            <h2>Fale Conosco</h2>
+            <address>
+                <p><strong>Endereço:</strong> Rua da Solidariedade, 123, Bairro da Esperança, Cidade - UF, CEP: 00000-000</p>
+                <p><strong>Telefone:</strong> <a href="tel:+5511999998888">(11) 99999-8888</a></p>
+                <p><strong>Email:</strong> <a href="mailto:contato@ong.org.br">contato@ong.org.br</a></p>
+                <p><strong>Horário de Funcionamento:</strong> Segunda a Sexta, das 9h às 18h.</p>
+            </address>
+        </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 ONG Juntos Pela Causa</p>
+        <p>&copy; 2024 [Nome da ONG]. Todos os direitos reservados. | <a href="#">Política de Privacidade</a></p>
+        <div class="social-links">
+            <a href="#" aria-label="Facebook">F</a>
+            <a href="#" aria-label="Instagram">I</a>
+            <a href="#" aria-label="LinkedIn">L</a>
+        </div>
     </footer>
-    <script src="/plataforma-ong-parte-2/js/main.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
