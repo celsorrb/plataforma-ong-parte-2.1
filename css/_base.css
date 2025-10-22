@@ -1,0 +1,59 @@
+/* Módulo: _base.css - Estilos Globais e Tipografia Base */
+
+body {
+    font-family: var(--fonte-principal);
+    font-size: var(--tamanho-p-base);
+    line-height: var(--line-height-base);
+    color: var(--cor-neutra-dark);
+    background-color: var(--cor-neutra-light);
+    padding-top: var(--espaco-xxl); /* Espaço para o header fixo */
+}
+
+/* Estilos de Títulos */
+h1, h2, h3, h4 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-primaria-dark);
+    margin-bottom: var(--espaco-md);
+    line-height: 1.2;
+}
+h1 { font-size: var(--tamanho-h1); }
+h2 { font-size: var(--tamanho-h2); }
+h3 { font-size: var(--tamanho-h3); }
+h4 { font-size: var(--tamanho-h4); }
+
+p {
+    margin-bottom: var(--espaco-md);
+}
+
+/* Links */
+a {
+    color: var(--cor-principal);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+a:hover {
+    color: var(--cor-primaria-dark);
+}
+
+/* Imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius);
+}
+
+/* Acessibilidade */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--cor-principal);
+    color: var(--cor-clara);
+    padding: var(--espaco-sm);
+    z-index: 1000;
+    transition: top 0.3s;
+}
+.skip-link:focus {
+    top: 0;
+}

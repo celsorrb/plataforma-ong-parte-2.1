@@ -1,0 +1,86 @@
+/* Módulo: _pages.css - Estilos específicos de Páginas */
+
+/* ========================================= */
+/* HOME (index.html) */
+/* ========================================= */
+
+.hero-section {
+    grid-column: 1 / -1; 
+    display: grid;
+    /* 12 colunas, 6 para imagem, 6 para conteúdo */
+    grid-template-columns: repeat(12, 1fr); 
+    gap: var(--espaco-lg);
+    align-items: center;
+    padding: 0; /* A seção Hero não tem padding interno para a imagem */
+    box-shadow: none; /* Hero não tem sombra */
+    background-color: transparent;
+}
+.hero-section figure {
+    grid-column: 1 / 7; /* Colunas 1 a 6 */
+    margin: 0;
+}
+.hero-section > div {
+    grid-column: 7 / 13; /* Colunas 7 a 12 */
+    padding: var(--espaco-lg);
+}
+
+.valores .destaques {
+    display: flex;
+    gap: var(--espaco-lg);
+    margin-top: var(--espaco-md);
+}
+.destaques article {
+    flex: 1;
+    padding: var(--espaco-lg);
+    background-color: var(--cor-neutra-light);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--border-radius);
+    transition: transform 0.2s;
+}
+
+/* ========================================= */
+/* PROJETOS (projetos.html) */
+/* ========================================= */
+#projetos-em-destaque {
+    /* Usando Grid para o layout dos cards de projetos */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* 2 ou mais colunas */
+    gap: var(--espaco-xl);
+    margin-top: var(--espaco-lg);
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    grid-column: 1 / -1;
+}
+
+/* Voluntariado Details */
+#voluntariado details {
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--border-radius);
+    margin-top: var(--espaco-md);
+    background-color: #fafafa;
+}
+
+/* Doação Form */
+#doacao form {
+    background-color: #e9f7ef; 
+    padding: var(--espaco-xxl);
+    max-width: 500px;
+    margin-top: var(--espaco-md);
+}
+
+/* ========================================= */
+/* CADASTRO (cadastro.html) */
+/* ========================================= */
+#cadastroForm fieldset {
+    border: 1px solid var(--cor-borda);
+    padding: var(--espaco-xl);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--espaco-xl);
+}
+#cadastroForm legend {
+    font-size: var(--tamanho-h4);
+    color: var(--cor-secundaria-dark);
+    padding: 0 var(--espaco-sm);
+    margin-bottom: 0;
+}

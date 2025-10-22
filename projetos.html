@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça nossos projetos sociais, descubra como ser voluntário e faça uma doação online para apoiar nossa causa.">
+    <title>Projetos, Voluntariado e Doação - [Nome da ONG]</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo</a>
+    
+    <header>
+        <div class="logo">
+            <img src="img/ong-logo.png" alt="Logotipo da ONG - Juntos Pela Causa">
+        </div>
+        
+        <button class="menu-toggle" aria-controls="navegacao-principal" aria-expanded="false" aria-label="Abrir Menu">☰</button>
+        
+        <nav aria-label="Navegação Principal" id="navegacao-principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                 <li class="dropdown">
+                    <a href="projetos.html" aria-current="page" role="button" aria-expanded="false">Projetos Sociais ▼</a>
+                    <ul class="dropdown-content">
+                        <li><a href="projetos.html#raizes">Raízes do Futuro</a></li>
+                        <li><a href="projetos.html#conexao">Conexão Digital</a></li>
+                    </ul>
+                </li>
+                <li><a href="cadastro.html">Seja Voluntário / Doador</a></li>
+            </ul>
+        </nav>
+        <a href="cadastro.html" class="cta-button cta-header">Doar Agora</a>
+    </header>
+
+    <main id="conteudo-principal">
+        <hgroup style="grid-column: 1 / -1;">
+            <h1>Nossos Projetos de Impacto Social</h1>
+            <p>Aqui você encontra todas as informações sobre como transformamos vidas.</p>
+        </hgroup>
+
+        <section id="projetos-em-destaque">
+            <h2>Projetos Atuais</h2>
+            <article class="projeto" id="raizes">
+                <figure>
+                    <img src="img/projeto1.jpg" alt="Mãos plantando uma muda verde no solo, simbolizando sustentabilidade.">
+                    <figcaption>Cuidado e plantio de mudas.</figcaption>
+                </figure>
+                <span class="badge badge-secundaria">Sustentabilidade</span>
+                <span class="badge badge-primaria">Em Andamento</span>
+                <h3>Projeto Raízes do Futuro</h3>
+                <p>Foco: **Sustentabilidade e Reflorestamento Comunitário.**</p>
+                <p>Descrição: Iniciativa que visa o plantio de árvores em áreas degradadas, educando a comunidade sobre a importância da biodiversidade. Nossos indicadores mostram que mais de 5.000 mudas foram plantadas no último ano.</p>
+                <div class="indicadores">
+                    <span><strong>Impacto:</strong> +5.000 Árvores</span>
+                    <span><strong>Meta:</strong> R$ 30.000</span>
+                    <span><strong>Progresso:</strong> 90%</span>
+                </div>
+                <a href="#" class="details-link">Ver detalhes e indicadores</a>
+            </article>
+
+            <article class="projeto" id="conexao">
+                <figure>
+                    <img src="img/projeto-educacao.jpg" alt="Foto de crianças estudando em uma sala de aula.">
+                    <figcaption>Aulas de Inclusão Digital.</figcaption>
+                </figure>
+                <span class="badge badge-alerta">Educação</span>
+                <span class="badge badge-secundaria">Novo</span>
+                <h3>Projeto Conexão Digital</h3>
+                <p>Foco: **Educação e Inclusão Digital.**</p>
+                <p>Descrição: Oferece cursos de tecnologia e acesso à internet para jovens em situação de vulnerabilidade. Nossos indicadores mostram que 85% dos participantes conseguiram o primeiro emprego.</p>
+                <div class="indicadores">
+                    <span><strong>Impacto:</strong> +500 Jovens</span>
+                    <span><strong>Meta:</strong> R$ 20.000</span>
+                    <span><strong>Progresso:</strong> 75%</span>
+                </div>
+                <a href="#" class="details-link">Ver detalhes e indicadores</a>
+            </article>
+        </section>
+
+        <section id="voluntariado">
+            <h2>Junte-se ao nosso time de Voluntários!</h2>
+            <p>O voluntariado é o coração da nossa ONG. Sua energia e tempo são fundamentais para o sucesso de nossos projetos. Temos diversas oportunidades, desde ações pontuais até apoio em gestão.</p>
+            
+            <details>
+                <summary>Oportunidades de Voluntariado Atuais</summary>
+                <ul>
+                    <li>Tutor(a) em Matemática (Online)</li>
+                    <li>Auxiliar de Eventos (Presencial)</li>
+                    <li>Designer Gráfico (Remoto)</li>
+                </ul>
+                <p>Interessado? <a href="cadastro.html" class="cta-link">Faça seu Cadastro como Voluntário</a>.</p>
+            </details>
+        </section>
+
+        <section id="doacao">
+            <h2>Apoie Nossa Causa com uma Doação</h2>
+            <p>Cada doação, por menor que seja, nos ajuda a manter e expandir o alcance de nossos projetos sociais. Sua contribuição é 100% aplicada em ações de impacto.</p>
+            <form action="cadastro.html" method="get">
+                <fieldset>
+                    <legend>Como você deseja contribuir?</legend>
+                    <label for="valor-doacao">Valor Sugerido:</label>
+                    <select id="valor-doacao" name="valor-sugerido">
+                        <option value="50">R$ 50,00</option>
+                        <option value="100">R$ 100,00</option>
+                        <option value="outros">Outro Valor</option>
+                    </select>
+                    <label>
+                        <input type="radio" name="tipo-doacao" value="unica" checked> Doação Única
+                    </label>
+                    <label>
+                        <input type="radio" name="tipo-doacao" value="mensal"> Doação Mensal
+                    </label>
+                    <p class="small-text">Ao clicar em "Doar Agora", você será redirecionado para nossa página de cadastro/pagamento seguro.</p>
+                    <button type="submit" class="cta-button">Doar Agora</button>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 [Nome da ONG]. Todos os direitos reservados. | <a href="#">Termos de Uso</a></p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

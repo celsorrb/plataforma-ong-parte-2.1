@@ -1,0 +1,68 @@
+/* Módulo: _navigation.css - Estilos de Navegação */
+
+/* ========================================= */
+/* NAVEGAÇÃO PRINCIPAL E DROPDOWN */
+/* ========================================= */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: var(--espaco-xl);
+}
+
+nav a {
+    font-weight: bold;
+    padding: var(--espaco-sm) 0;
+    transition: all 0.3s;
+}
+
+nav a:hover, nav a[aria-current="page"] {
+    color: var(--cor-principal);
+    border-bottom: 2px solid var(--cor-principal);
+}
+
+/* Estrutura Dropdown (A ser implementada no HTML se necessário, mantendo o exemplo simples por enquanto) */
+.dropdown {
+    position: relative;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--cor-clara);
+    min-width: 160px;
+    box-shadow: var(--sombra-padrao);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    border-radius: var(--border-radius);
+    border-top: 3px solid var(--cor-secundaria);
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content a {
+    color: var(--cor-neutra-dark);
+    padding: var(--espaco-md);
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid var(--cor-borda);
+}
+.dropdown-content a:hover {
+    background-color: var(--cor-neutra-light);
+}
+
+/* ========================================= */
+/* MENU HAMBÚRGUER (MOBILE) */
+/* ========================================= */
+.menu-toggle {
+    display: none; /* Escondido por padrão no desktop */
+    cursor: pointer;
+    z-index: 1001;
+    font-size: 1.5rem;
+    padding: var(--espaco-sm);
+    color: var(--cor-principal);
+}
+
+/* Quando o menu mobile estiver ativo */
+nav.mobile-active ul {
+    /* Estilos para o menu aberto em mobile - definidos no _responsive.css */
+}

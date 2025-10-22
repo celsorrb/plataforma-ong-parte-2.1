@@ -1,0 +1,60 @@
+/* Módulo: _layout.css - Estrutura Geral e Grid Principal */
+
+/* ========================================= */
+/* GRID CUSTOMIZADO DE 12 COLUNAS E ESTRUTURA MAIN */
+/* ========================================= */
+main {
+    max-width: 1300px; 
+    margin: 0 auto;
+    padding: var(--espaco-xl);
+    
+    /* GRID PRINCIPAL (12 Colunas - Aplicado em Main para estrutura geral) */
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); 
+    gap: var(--espaco-lg); /* Espaçamento entre colunas e linhas */
+}
+
+section {
+    grid-column: 1 / -1; /* Todas as seções ocupam 12 colunas por padrão */
+    background-color: var(--cor-clara);
+    padding: var(--espaco-xxl);
+    margin-bottom: 0; /* O gap do grid gerencia o espaçamento vertical */
+    border-radius: var(--border-radius);
+    box-shadow: var(--sombra-padrao);
+}
+
+/* ========================================= */
+/* HEADER E FOOTER */
+/* ========================================= */
+header {
+    background-color: var(--cor-clara);
+    padding: var(--espaco-sm) var(--espaco-xl);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+.logo img {
+    max-height: var(--espaco-xxl); 
+}
+
+/* O estilo da NAV está no _navigation.css */
+
+footer {
+    grid-column: 1 / -1;
+    background-color: var(--cor-neutra-dark);
+    color: var(--cor-clara);
+    text-align: center;
+    padding: var(--espaco-md) var(--espaco-xl);
+    margin-top: 0; /* Removido margin-top para ser controlado pelo grid */
+}
+
+footer a {
+    color: var(--cor-secundaria);
+}

@@ -1,0 +1,189 @@
+/* Módulo: _components.css - Estilos para Componentes de Interface */
+
+/* ========================================= */
+/* BOTÕES (Com Estados Visuais) */
+/* ========================================= */
+.cta-button {
+    display: inline-block;
+    background-color: var(--cor-alerta); 
+    color: var(--cor-clara);
+    padding: var(--espaco-md) var(--espaco-xl); 
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: var(--tamanho-small);
+}
+
+.cta-button:hover, .cta-button:focus {
+    background-color: #d15c00; 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 111, 0, 0.4);
+}
+
+.cta-button:active {
+    transform: translateY(0);
+    box-shadow: none;
+    background-color: var(--cor-primaria-dark);
+}
+
+.cta-button:disabled {
+    background-color: var(--cor-neutra-medium);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+    opacity: 0.6;
+}
+
+/* Links de Documentos/Detalhes */
+.document-link, .details-link, .cta-link {
+    display: inline-block;
+    color: var(--cor-principal);
+    border: 1px solid var(--cor-principal);
+    padding: var(--espaco-sm) var(--espaco-md);
+    border-radius: var(--border-radius);
+    margin-right: var(--espaco-sm);
+    margin-top: var(--espaco-sm);
+    transition: all 0.3s;
+    font-size: var(--tamanho-small);
+}
+
+.document-link:hover, .details-link:hover, .cta-link:hover {
+    background-color: var(--cor-principal);
+    color: var(--cor-clara);
+}
+
+/* ========================================= */
+/* FORMULÁRIOS ESTILIZADOS E VALIDAÇÃO VISUAL */
+/* ========================================= */
+label {
+    display: block;
+    margin-top: var(--espaco-sm);
+    margin-bottom: var(--espaco-xs);
+    font-weight: bold;
+    color: var(--cor-neutra-dark);
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+input[type="date"], 
+select {
+    width: 100%;
+    padding: var(--espaco-md);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--border-radius);
+    font-size: var(--tamanho-p-base);
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: var(--cor-principal);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* Validação Visual: Campos Inválidos */
+input:not(:focus):invalid {
+    border-color: #dc3545; /* Vermelho para erro */
+}
+input:not(:focus):invalid:not(:placeholder-shown) {
+    background-color: #f8d7da; /* Fundo suave de erro */
+}
+
+/* Validação Visual: Campos Válidos (Opcional, mas útil) */
+input:not(:focus):valid:not([type="date"]) {
+    border-color: var(--cor-secundaria); /* Verde para válido */
+}
+
+/* ========================================= */
+/* CARDS RESPONSIVOS (PROJETOS) */
+/* ========================================= */
+.projeto {
+    background-color: var(--cor-clara);
+    border-left: 5px solid var(--cor-principal);
+    padding: var(--espaco-lg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--sombra-card);
+    transition: transform 0.3s, border-left-color 0.3s;
+}
+
+.projeto:hover {
+    transform: translateY(-5px);
+    border-left-color: var(--cor-secundaria);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.projeto figure {
+    margin-bottom: var(--espaco-md);
+}
+.projeto img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.indicadores {
+    margin-top: var(--espaco-md);
+    padding-top: var(--espaco-md);
+    border-top: 1px solid var(--cor-borda);
+    display: flex;
+    justify-content: space-between;
+    gap: var(--espaco-sm);
+    font-size: var(--tamanho-small);
+    flex-wrap: wrap;
+}
+
+.indicadores span {
+    background-color: #f0f0f0;
+    padding: var(--espaco-xs) var(--espaco-sm);
+    border-radius: 3px;
+    color: var(--cor-neutra-dark);
+}
+.indicadores span strong {
+    color: var(--cor-principal);
+}
+
+/* ========================================= */
+/* BADGES E TAGS (Para categorização) */
+/* ========================================= */
+.badge {
+    display: inline-block;
+    padding: var(--espaco-xs) var(--espaco-sm);
+    border-radius: var(--border-radius);
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: var(--espaco-sm);
+}
+
+.badge-primaria {
+    background-color: var(--cor-principal);
+    color: var(--cor-clara);
+}
+
+.badge-secundaria {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-clara);
+}
+
+.badge-alerta {
+    background-color: var(--cor-alerta);
+    color: var(--cor-neutra-dark);
+}
+
+/* Componente de Feedback/Alert */
+.alert-warning {
+    background-color: #fff3cd; 
+    border-left: 5px solid #ffc107; 
+    padding: var(--espaco-md);
+    border-radius: 4px;
+    margin-top: var(--espaco-md);
+    color: #856404;
+}
+
+.alert-warning p:last-child {
+    margin-bottom: 0;
+}

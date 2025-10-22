@@ -1,0 +1,13 @@
+/* Módulo: _reset.css - Reset Básico */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Melhoria para a acessibilidade da tabulação */
+:focus {
+    outline: 2px dashed var(--cor-principal);
+    outline-offset: 2px;
+}
